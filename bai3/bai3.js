@@ -10,10 +10,9 @@ console.log(randomNumber);
 win.style.display = "none";
 lost.style.display = "none";
 again.style.display = "none";
-
+let dem = 3;
 spin.onclick = function () {
-    let numbe = numb.value;
-    let dem = 3;
+    let numbe = numb.value;   
     // console.log(numbe);
     if( numbe<1 || numbe >10 ) {
         error.style.display = "block";
@@ -26,6 +25,7 @@ spin.onclick = function () {
             if (dem == 0) {
                 lost.style.display = "flex";
                 soLan.innerHTML = ` Bạn đã hết lượt chơi`;
+                again.style.display = "block";
             }
         } else {
             win.style.display = "flex"; 
